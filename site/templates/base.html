@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-image: url('https://i.pinimg.com/originals/93/65/1d/93651dceeee949437c20171dd3f7cd0e.jpg');
+            background-size: cover;
+        }
+        input,button,textarea,select{
+            background: none;
+        }
+        input,button,textarea,select::placeholder{
+            color:white
+        }
+        *{
+            color: white;
+        }
+        option{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-left">
+            <h1>
+                <a href="{% url 'home' %}">Bosh sahifaga o'tish</a>
+            </h1>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'post_new' %}">+yangi post qo'shish</a>
+        </div>
+        
+    </header>
+    <div>
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>

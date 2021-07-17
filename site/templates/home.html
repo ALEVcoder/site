@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<title>Bosh sahifa</title>
+<style>
+    h2{
+        color:blue;
+        text-align:center;
+        text-decoration: none;
+    }
+    p{
+        color:red;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        text-align: center;
+    }
+</style>
+{% for post in object_list %}
+<div class="post-entry">
+    <h2><a href="{% url 'post_detail' post.pk%}">{{post.title}}</a></h2>
+    <p>{{post.body}}</p>
+</div>
+{% endfor %}
+{% endblock content %}
